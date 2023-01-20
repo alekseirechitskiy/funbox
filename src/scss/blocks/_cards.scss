@@ -1,0 +1,15 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media #{$tablet} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media #{$desktop} {
+    margin: 0 -40px;
+  }
+}

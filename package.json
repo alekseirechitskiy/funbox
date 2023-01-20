@@ -1,4 +1,5 @@
 {
+  "homepage": "https://alekseirechitskiy.github.io/funbox",
 	"name": "funbox",
 	"version": "1.0.0",
 	"description": "Aleksei's build",
@@ -7,7 +8,8 @@
 	"scripts": {
 		"dev": "gulp",
 		"build": "gulp build --build",
-		"deploy": "gulp deployFTP --build"
+		"predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
 	},
 	"author": "Aleksei Rechitskiy",
 	"license": "ISC",
@@ -53,5 +55,8 @@
 		"not ie <= 11",
 		"not op_mini all",
 		"not < 0.25%"
-	]
+	],
+	"dependencies": {
+		"gh-pages": "^4.0.0"
+	}
 }
